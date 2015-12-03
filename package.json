@@ -9,7 +9,7 @@
   "author": "The Chainscript Team",
   "license": "MIT",
   "devDependencies": {
-    "merkle": "^0.3.1",
+    "merkle": "git@github.com:stratumn/merkle.git",
     "mocha": "^2.3.3",
     "should": "^7.1.0"
   }

@@ -19,7 +19,7 @@ describe('verifyMerkleProof()', function() {
 
   it('should return false if a parent is invalid', function() {
     var proof = getMerkleProof(tree, 0);
-    proof[0].parent = 'ZERTYUIO';
+    proof[0].parent = new Buffer('ZERTYUIO');
     verifyMerkleProof(
       proof,
       tree.level(3)[0],
@@ -32,7 +32,7 @@ describe('verifyMerkleProof()', function() {
     var proof = getMerkleProof(tree, 0);
     verifyMerkleProof(
       proof,
-      'ERTYUILM',
+      new Buffer('ERTYUILM'),
       tree.root(),
       'sha256'
     ).should.be.exactly(false);
@@ -43,7 +43,7 @@ describe('verifyMerkleProof()', function() {
     verifyMerkleProof(
       proof,
       tree.level(3)[0],
-      'AZERTYUIO',
+      new Buffer('AZERTYUIO'),
       'sha256'
     ).should.be.exactly(false);
   });
