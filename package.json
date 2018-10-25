@@ -10,7 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "merkle": "git@github.com:stratumn/merkle.git",
-    "mocha": "^2.3.3",
+    "mocha": "^5.2.0",
     "should": "^7.1.0"
   }
 }
